@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    
+    <script>
+        // var div = $('#app');
+        var div = document.querySelector('#app');
+        var viewModel = {};
+
+        // 즉시실행
+        (function(){
+            
+            function init() {
+                // view의 핵심, reactivity
+                // 데이터의 변화를 라이브러리에서 감지해서 자동으로 변환해주는것
+                Object.defineProperty(viewModel, 'str', {
+                    get: function () {
+                        console.log('접근');
+                    },
+                    set: function (newValue) {
+                        console.log('할당', newValue);
+                        render(newValue);
+                    }
+                })
+            }
+
+            function render(Value) {
+                div.innerHTML = Value;
+            }
+
+            init()
+        })();
+        
+
+    </script>
+
+</body>
+</html>

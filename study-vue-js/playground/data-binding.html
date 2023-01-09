@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-bind:id="uuid" v-bind:class="name">{{num}}</p>
+        <p>{{doubleNum}}</p>
+        <div v-if="loading">
+            Loading...
+        </div>
+        <div v-else>
+            test user has been logged in
+        </div>
+        <!-- v-show와 v-if의 차이점은 해당되지 않으면 v-if는 개발자도구에서 아예 코드가 사라지는데 v-show는 개발자 도구에는 남아있고 화면상으로는 보이지않음 -->
+        <div v-show="loading">
+            Loading...
+        </div>
+        <input v-model="message" placeholder = "edit me">
+        <p>{{message}}</p>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                num: 10,
+                uuid: 'abc1234',
+                name: 'text-blue',
+                loading: true,
+                message: ''
+            },
+            // 데이터의 값에 따라 바뀌는 값을 설정하고 싶을때 computed라는걸 사용
+            computed: {
+                doubleNum: function(){
+                    return this.num * 2;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
