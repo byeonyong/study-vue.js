@@ -3,8 +3,9 @@
 
 > 프로젝트 설명
 ```text
-1. vue-cli는 vue-client의 사용법에 대해서 간단하게 만든 프로젝트
-2. vue-form은 간단한 form 예제를 구성해놓은 프로젝트
+1. study-vue-js는 vue의 기능들에 대한 내용이 정리 된 폴더
+2. vue-cli는 vue-client의 사용법에 대해서 간단하게 만든 프로젝트
+3. vue-form은 간단한 form 예제를 구성해놓은 프로젝트
 ```
 
 
