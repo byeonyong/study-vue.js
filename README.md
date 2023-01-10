@@ -12,7 +12,7 @@
 > 서버실행방법
 ```text
 1. 서버를 띄우고자 하는 폴더에 들어감 ex) vue-cli, vue-form
-2. vue run serve
+2. 터미널에서 "vue run serve" 입력
   App running at:
   - Local:   http://localhost:5052/
   - Network: http://192.168.30.41:5052/
